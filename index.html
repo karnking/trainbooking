@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+    <div id="navbar"></div>
+    <div id="root">
+        <h2>Registration</h2>
+        <form name="regForm">
+            <label>Unique Id <input type='text' name="uid" required/></label>
+            <label>Name <input type='text' name="name" required/></label>
+            <label>Age <input type='number' name="age" min="18" max="40" required/></label>
+            <label>From 
+                <select name="from">
+                    <option value="">--select--</option>
+                    <option value="Banglore">Banglore</option>
+                    <option value="Pune">Pune</option>
+                    <option value="Hyderabad">Hyderabad</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Mumbai">Mumbai</option>
+                </select>
+            </label>
+            <label>To 
+                <select name="to">
+                    <option value="">--select--</option>
+                    <option value="Banglore">Banglore</option>
+                    <option value="Pune">Pune</option>
+                    <option value="Hyderabad">Hyderabad</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Mumbai">Mumbai</option>
+                </select>
+            </label> 
+            <label>
+                Journey Date <input type="date"  name="jdate" required>
+            </label>
+            <label>
+                Seat prefrence
+                <select name="seat_pref">
+                    <option value="">--select--</option>
+                    <option value="AC First Class">AC First Class</option>
+                    <option value="Sleeper Class">Sleeper Class</option>
+                    <option value="Second Class">Second Class</option>
+                    <option value="General">General</option>
+                </select>
+            </label>
+            <input type="submit" value="Register" />
+        </form>
+    </div>
+</body>
+<script type="module">
+    import {navbar} from "./components/navbar.js"
+    document.getElementById("navbar").innerHTML = navbar.innerHTML
+</script>
+<script src="scripts/index.js" type="module"></script>
+</html>
